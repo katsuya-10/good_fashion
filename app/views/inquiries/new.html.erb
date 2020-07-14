@@ -5,6 +5,17 @@
     </p>
     <%# 関連するinquiryモデルがある為、[form_with]を使う %>
     <%= form_with(model: @inquiry, url: inquiries_confirm_path, local: true) do |f| %>
+
+    <% if @inquiry.errors.any? %>
+      <div class="alert alert-danger" role="alert">
+        <strong>入力内容にエラーがあります</strong>
+        <ul>
+          <% @inquiry.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
       <div class="form-group">
        <%= f.label :name %>
         <%= f.text_field :name, autofocus: true, class: "form-control", placeholder: "お名前" %>
