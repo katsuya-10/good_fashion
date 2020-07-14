@@ -1,0 +1,9 @@
+# 入力フォームの日本語例
+ja:
+  activerecord:
+    attributes:
+      inquiry:
+        name: "今日のファッションイケてる人の名前"
+        email: "ファッションイケてる人のメールアドレス"
+        relationship: "イケてる人との関係"
+        content: "オシャレだねポイント"
